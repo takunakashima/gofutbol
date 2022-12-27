@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+<div class="main_wrapper">
+<div class="side_ber">
+    <%= render "side_bar" %>
+</div>
+<div class="main">
+  <div class="image-list">
+    <% @post.each do |post|%> 
+      <%= image_tag post.image.variant(resize: '400x400'), class: "post-image" %>
+    <% end %>
+  </div>
+</div>
+</div>
+<%= render "shared/footer" %>

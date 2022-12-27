@@ -1,0 +1,66 @@
+<div class="items-sell-contents">
+  <header>
+<%= render "shared/second-header"%>
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">投稿内容を入力</h2>
+    <%= form_with model: @post, local: true do |f| %>
+
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%= render 'shared/error_messages', model: f.object %>
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+
+    <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像選択
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /商品画像 %>
+
+       <%# 試合日 %>
+       <div class="new-post-info">月を選択してください<span class="indispensable">必須</span></div>
+        <%= f.collection_select(:month_id, Month.all, :id, :name , {}, {class:"select-box", id:"month-id"}) %>
+       <div class="new-post-info">日を選択してください<span class="indispensable">必須</span></div>
+        <%= f.collection_select(:day_id, Day.all, :id, :name , {}, {class:"select-box", id:"day-id"}) %>
+       <div class="new-post-info">対戦チームを選択してください</div>
+        <%= f.collection_select(:team_id, Team.all, :id, :name, {}, {class:"select-box", id:"team-id"})%>
+
+       <%# 試合日 %>
+
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          テキスト
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"items-text", id:"item-info", placeholder:"投稿内容のコメントを（必須 1,000文字まで）
+例）カタールワールドカップ決勝トーナメント一回戦vsクロアチア！スコアレスドローのまま延長30分でも決着がつかず、勝敗はPK戦へ。。。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+  <footer>
+    <%= render "shared/second-footer"%>
+  </footer>
+</div>

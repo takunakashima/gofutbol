@@ -3,21 +3,13 @@
 **##　usersテーブル**
 
 | Column             | Type   | Options                   |
-
 | ------------------ | ------ | --------------------------|
-
 | email              | string | null: false , unique: true|
-
 | encrypted_password | string | null: false               |
-
 | nickname           | string | null: false               |
-
 | first_name         | string | null: false               |
-
 | last_name          | string | null: false               |
-
 | birth_date         | date   | null: false               |
-
 | team_id            | integer| null: false               |
 
 **### Association**
@@ -30,11 +22,8 @@
 **##　favoritesテーブル**
 
 | Column             | Type   | Options                   |
-
 | ------------------ | ------ | --------------------------|
-
 | follow             | string | null: false , unique: true|
-
 | follower           | string | null: false               |
 
 **### Association**
@@ -45,11 +34,8 @@
 **## user_　favoritesテーブル**
 
 | Column             | Type    | Options                        |
-
 | ------------------ | ------- | -------------------------------|
-
 | user               |reference| null: false , foreign_key: true|
-
 | favorite           |reference| null: false , foreign_key: true|
 
 **### Association**
@@ -60,32 +46,24 @@
 **##　postsテーブル**
 
 | Column             | Type    | Options                         |
-
 | ------------------ | ------- | --------------------------------|
-
 | month_id           | integer | null: false                     |
-
 | day_id             | integer | null: false                     |
-
 | team_id            | integer | null: false                     |
-
 | content            | text    | null: false                     |
-
 | user               |reference| null: false , foreign_key: true |
 
 **### Association**
 
 - belongs_to :user
-- has_many :commets
+- has_many :comments
 - has_many :post_tags
 - has_many :tags, through: :post_tags
 
 **##　tagsテーブル**
 
 | Column             | Type   | Options     |
-
 | ------------------ | ------ | ------------|
-
 | tag_name           | string | null: false |
 
 **### Association**
@@ -96,11 +74,8 @@
 **##　post_tagsテーブル**
 
 | Column             | Type    | Options                         |
-
 | ------------------ | ------- | --------------------------------|
-
 | tag                |reference| null: false, foreign_key: true  |
-
 | post               |reference| null: false, foreign_key: true  |
 
 **### Association**
@@ -111,11 +86,8 @@
 **##　commentsテーブル**
 
 | Column             | Type    | Options                        |
-
 | ------------------ | ------- | -------------------------------|
-
 | post               |reference| null: false ,foreign_key: true |
-
 | user               |reference| null: false ,foreign_key: true |
 
 **### Association**
