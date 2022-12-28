@@ -38,7 +38,7 @@
 | user               |reference| null: false , foreign_key: true|
 | favorite           |reference| null: false , foreign_key: true|
 
-**### Association**
+**### Associfonation**
 
 - belongs_to :user
 - belongs_to :favorite

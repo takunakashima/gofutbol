@@ -7,14 +7,19 @@ a {
 
 .side_ber{
   width: 18vw;
-  background-color:khaki
+  background-color:white;
 }
 .main {
   height: 90vh;
   width:100%;
   background: #f8f8f8;
 }
-
+.new-posts{
+text-align: center;
+font-size: 150%;
+font-weight: bold;
+margin:3vh auto;
+}
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
   width: 100vw;

@@ -34,8 +34,13 @@
   color: #FFF;
   background-color: #272727;
   text-align: center;
+  display: flex;
 }
+.footer-inc{
+  text-align: left;
+  font-size: small;
 
+}
 .footer-contents {
   display: flex;
   justify-content: center;

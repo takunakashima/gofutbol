@@ -5,7 +5,7 @@
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">投稿内容を入力</h2>
-    <%= form_with model: @post, local: true do |f| %>
+    <%= form_with model: @post, id: 'new_post', local: true do |f| %>
 
     <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
     <%= render 'shared/error_messages', model: f.object %>
@@ -22,6 +22,9 @@
           クリックしてファイルをアップロード
         </p>
         <%= f.file_field :image, id:"item-image" %>
+          <div class="preview-image">
+            <div id="previews"></div>
+          </div>
       </div>
     </div>
     <%# /商品画像 %>

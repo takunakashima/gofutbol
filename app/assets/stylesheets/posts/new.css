@@ -230,3 +230,8 @@
 .inc {
   font-size: 13px;
 }
+.preview-image{
+  max-width: 600px;
+  max-height: 500px;
+  margin: 10px auto;
+}

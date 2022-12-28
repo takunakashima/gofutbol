@@ -29,7 +29,7 @@
   height: 50vh;
   width: 60vw;
   min-height: 500px;
-  background-color: rgb(205, 202, 202);
+  /* background-color: rgb(205, 202, 202); */
   object-fit: contain;
 }
 
@@ -52,7 +52,7 @@
 
 .item-red-btn {
   text-align: center;
-  background-color: #ea352d;
+  background-color:forestgreen;
   font-size: 24px;
   font-weight: bold;
   color: #FFF;
@@ -109,8 +109,8 @@
   border-radius: 40px;
   width: 15vw;
   min-width: 200px;
-  color: rgb(249, 75, 0);
-  border: 2px solid #ffb340;
+  color: forestgreen;
+  border: 2px solid forestgreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,15 +123,14 @@
 
 .report-btn {
   border-radius: 40px;
-  width: 15vw;
+  width: 100%;
   min-width: 200px;
-
   padding: 1vh 0;
   color: black;
   border: 2px solid #2d2d2d;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .report-flag-icon {
@@ -165,8 +164,8 @@
 
 .comment-btn {
   line-height: 48px;
-  background-color: #3CCACE;
-  border: 1px solid #3CCACE;
+  background-color:goldenrod;
+  border: 1px solid goldenrod;
   color: #fff;
   width: 50%;
   min-width: 150px;
@@ -194,13 +193,13 @@
 .change-item-btn {
   font-size: 30px;
   text-decoration: none;
-  color: #3CCACE;
+  color:goldenrod;
 }
 
 .another-item {
   display: block;
   margin: 30px 0px 8px;
-  color: #3CCACE;
+  color: goldenrod;
   text-decoration: none;
   font-weight: bold;
   font-size: 23px;
