@@ -47,24 +47,26 @@
   </div>
   <%# /商品の概要 %>
 
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <p class="comment-warn">
-        相手のことを考え丁寧なコメントを心がけましょう。
-        <br>
-        不快な言葉遣いなどは利用制限や退会処分となることがあります。
-      </p>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-      <div class="report-btn">
-        <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%>
-        <span>不適切なコメントの通報</span>
+  <%# コメント機能の実装 %>
+  <div id="comments">
+    <% @post.comments.each do |comment| %>
+      <div class="comment">
+        <p class="user-info"><%= comment.user.nickname %>： </p>
+        <p><%= comment.text%></p>
       </div>
-    </form>
-  </div>
+    <% end %>
+</div>
+ <div class="comment-box">
+ 
+  <% if user_signed_in? %>
+    <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
+      <%= f.text_area :text , class: "comment-text"%>
+      <%= f.submit "コメントをする", class: "comment-btn" %>
+    <% end %>
+  <% end %>
+    <p class="comment-warn">相手のことを考え丁寧なコメントを心がけましょう。</p>
+  </div> 
+  <%# コメント機能の実装 %>
   <div class="links">
     <a href="#" class="change-item-btn">
       ＜ 前の投稿

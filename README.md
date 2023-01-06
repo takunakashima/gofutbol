@@ -87,6 +87,7 @@
 
 | Column             | Type    | Options                        |
 | ------------------ | ------- | -------------------------------|
+| comment            | text    | null: false                    |
 | post               |reference| null: false ,foreign_key: true |
 | user               |reference| null: false ,foreign_key: true |
 

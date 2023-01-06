@@ -20,6 +20,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def edit
@@ -40,7 +42,7 @@ class PostsController < ApplicationController
       redirect_to root_path
     end  
   end
-  
+
   private
 
   def post_params
