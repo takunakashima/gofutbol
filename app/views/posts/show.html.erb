@@ -31,10 +31,10 @@
           <th class="detail-item">VS</th>
           <td class="detail-value"><%= "#{@post.team.name}戦" %></td>
         </tr>
-        <tr>
-          <th class="detail-item"></th>
-          <td class="detail-value"><%= @post.content %></td>
-        </tr>
+        <%# <tr>
+          <th class="detail-item">コメント一覧</th>
+          <td class="detail-value"><%= @post.content</td>
+        <%# </tr> %>
       </tbody>
     </table>
     <div class="option">
@@ -42,39 +42,33 @@
         <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
         <span>お気に入り 0</span>
       </div>
-      
     </div>
   </div>
   <%# /商品の概要 %>
 
+ 
   <%# コメント機能の実装 %>
-  <div id="comments">
+  
+
+ <div class="comment-box"> 
+ <div id="comments">
     <% @post.comments.each do |comment| %>
       <div class="comment">
         <p class="user-info"><%= comment.user.nickname %>： </p>
-        <p><%= comment.text%></p>
+        <p><%= comment.comment%></p>
       </div>
     <% end %>
-</div>
- <div class="comment-box">
- 
+  </div>
+
   <% if user_signed_in? %>
     <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
-      <%= f.text_area :text , class: "comment-text"%>
+      <%= f.text_area :comment , class: "comment-text"%>
       <%= f.submit "コメントをする", class: "comment-btn" %>
     <% end %>
   <% end %>
     <p class="comment-warn">相手のことを考え丁寧なコメントを心がけましょう。</p>
-  </div> 
+ </div> 
   <%# コメント機能の実装 %>
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の投稿
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの投稿 ＞
-    </a>
-  </div>
   <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
   <a href="#" class="another-item"><%= @post.user.nickname %>の投稿をもっと見る</a>
   <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
