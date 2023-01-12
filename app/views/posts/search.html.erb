@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+
+<div class="main_wrapper">
+<div class="side_ber">
+    <%= render "side_bar" %>
+</div>
+<div class="main">
+<% if @post.length == 0 %>
+   <h4 class="search-h4">検索結果 0件</h4>
+   <% else %>
+  <%# <p class="mypage-nickname"><%= 検索結果一覧</p>  %>
+    <% @post.each do |post| %>
+      <%# <div class="content_post" style="background-image: url(<%= post.image);"> %>
+        <%= link_to post_path(post.user.id) do %>
+        <%= image_tag post.image.variant(resize: '600x400',gravity: "center", crop: "300x250+0+0"), class: "post-image" %>
+        <p class="mypage-info"><%= " < 投稿日 >　#{post.created_at.strftime('%Y/%m/%d')}" %><%=" ：#{post.content}" %></p>
+      <%# </div> %>
+      <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: :index
+  before_action :move_to_index, except: [:index, :show, :search]
 
 
   def index
@@ -45,6 +46,10 @@ class PostsController < ApplicationController
     end  
   end
 
+  def search
+    @post = Post.search(params[:keyword])
+  end
+
   private
 
   def post_params
@@ -57,4 +62,11 @@ class PostsController < ApplicationController
       redirect_to root_path
      end
   end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
+  end
+
 end

@@ -40,11 +40,12 @@
 }
 
 .search-button {
-  width: 5vh;
+  width: 6vh;
   border: 0;
   cursor: pointer;
   background-color:forestgreen;
   padding: 8px;
+  color: white;
 }
 
 .トロフィーicon {
@@ -94,6 +95,7 @@
 .logout {
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
 
 .login {
