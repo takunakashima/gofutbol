@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: :index
+
 
   def index
     @post = Post.all.order(id: :DESC)

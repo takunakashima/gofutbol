@@ -7,18 +7,19 @@ a {
 
 .side_ber{
   width: 18vw;
-  background-color:white;
+  background-color:#f8f8f8;
 }
 .main {
   height: 90vh;
   width:100%;
-  background: #f8f8f8;
+  background: white;
 }
 .new-posts{
 text-align: center;
 font-size: 150%;
 font-weight: bold;
 margin:3vh auto;
+color: gray;
 }
 /* 画面上部の「人生を変えるフリマアプリ」帯部分 */
 .title-contents {
@@ -324,5 +325,7 @@ margin:3vh auto;
  .post-image{
   margin: 2vh 5vw;
  }
-
+.main-box{
+  margin:0;
+}
 /* //商品一覧 */

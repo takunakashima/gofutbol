@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.item-box>.name {
+.item-box> {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
@@ -247,4 +247,10 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
+}
+.name{
+  color: gray;
+  font-size: 25px;
+  font-weight: bold;
+margin-bottom: 7vh;
 }

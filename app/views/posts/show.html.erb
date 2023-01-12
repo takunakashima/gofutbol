@@ -1,12 +1,16 @@
 <%= render "shared/header" %>
 
+<div class="main_wrapper">
+<div class="side_ber">
+    <%= render "side_bar" %>
+</div>
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
 
-        <h2 class="name">
+        <div class="name">
       <%= "#{@post.user.nickname}'s post!" %>
-        </h2>
+        </div>
 
     <div class="item-img-content">
       <%= image_tag @post.image ,class:"item-box-img" %>
@@ -32,7 +36,7 @@
           <td class="detail-value"><%= "#{@post.team.name}戦" %></td>
         </tr>
         <tr>
-          <th class="detail-item">一言</th>
+          <th class="detail-item">コメント</th>
           <td class="detail-value"><%= @post.content%></td>
         </tr>
       </tbody>
@@ -52,6 +56,9 @@
  <div class="comment-box"> 
    <h4>＜コメント一覧＞</h4>
 
+<% if @comments.length == 0 %>
+   <h4>コメントはありません</h4>
+   <% else %>
   <div class="comments">
   <div id="comments">
     <% @post.comments.each do |comment| %>
@@ -63,6 +70,8 @@
     <% end %>
   </div>
   </div>
+<% end %>
+
   <% if user_signed_in? %>
     <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
       <%# <%= render 'shared/error_messages', model: f.object %>
@@ -74,9 +83,11 @@
   <% end %>
  </div> 
   <%# コメント機能の実装 %>
+  
   <%# 詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
-  <a href="#" class="another-item"><%= @post.user.nickname %>の投稿をもっと見る</a>
+  <%= link_to"#{@post.user.nickname}の投稿をもっと見る", "/users/#{current_user.id}",class: "another-item" %>
   <%# //詳細ページで表示されている商品のカテゴリー名を表示しましょう %>
+</div>
 </div>
 
 <%= render "shared/footer" %>
