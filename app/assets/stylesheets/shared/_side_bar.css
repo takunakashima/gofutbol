@@ -1,0 +1,17 @@
+.side-bar-container{
+  margin-top: 6vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.side-bar-icon{
+  margin-right: 1vw;
+}
+.side-bar-item{
+  color: #333333;
+  font-weight: bold;
+  font-size: large;
+}
+.side-bar-box{
+  background-color: white;
+  padding: 3px;
+}
