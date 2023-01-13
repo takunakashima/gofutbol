@@ -15,3 +15,27 @@
   background-color: white;
   padding: 3px;
 }
+
+.toggleButton {
+  width: 48px;
+  height: 24px;
+  cursor: pointer;
+  background-color: #ddd;
+  background-image: url("./images/toggle_button.png");
+  background-repeat: no-repeat;
+  background-position: top 2px left 2px;
+  background-size: 20px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 10%) inset;
+  transition: background-position 0.4s cubic-bezier(0.65, 0, 0.35, 1),
+    background-color 0.4s cubic-bezier(0.65, 0, 0.35, 1)
+      /* easeInOutCubicのイージング */;
+  appearance: none;
+  margin-bottom: 1vh;
+}
+
+.toggleButton:checked {
+  background-color: #4ac65f;
+  background-position: top 2px right 2px;
+}

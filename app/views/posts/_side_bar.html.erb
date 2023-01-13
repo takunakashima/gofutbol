@@ -1,6 +1,46 @@
 <div class="side-bar-wrapper">
 
-  <div class="side-bar-container">
+ 
+  <style>
+	.sample_menu_outer {
+		margin: 4rem auto;
+		}
+	.sample_menu {
+		width: 300px;
+		padding: 10px 20px;
+		}
+	.sample_menu_parent {
+		background-color: white;
+		cursor: pointer;
+		}
+	.sample_menu_parent::before {
+		content: '▼';
+		display: inline-block;
+		transform: rotate(-90deg);
+		transition: .4s;
+		}
+	.sample_menu_parent.active::before {
+		transform: rotate(0deg);
+		}
+	.sample_menu_child {
+		color: white;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+		transition: .4s;
+		}
+	.sample_menu_child.active {
+		height: 2rem;
+		opacity: 1;
+		visibility: visible;
+		}
+	</style>
+	
+	<div class="sample_menu_outer">
+		<ul>
+			<li class="sample_menu sample_menu_parent">MENU</li>
+			  <li class="sample_menu sample_menu_child">
+         <div class="side-bar-container">
   <div class="side-bar-box">
     <%= image_tag "ホームアイコン.png", class:"side-bar-icon" %>
     <%= link_to "ホーム", root_path, class: "side-bar-item" %>
@@ -14,8 +54,32 @@
   <%# </div> %> 
   <div class="side-bar-container">
   <div class="side-bar-box">
-     <%= image_tag "ハートのマーク5.png", class:"side-bar-icon" %>
+     <%= image_tag "星アイコン8.png", class:"side-bar-icon" %>
      <%= link_to "お気に入り", "#", class: "side-bar-item" %>
   </div>
   </div>
+  <div class="side-bar-container">
+  <div class="side-bar-box">
+     <%= image_tag "カメラのアイコン素材 7.png", class:"side-bar-icon" %>
+     <%= link_to '新規投稿', new_post_path, class: "side-bar-item"%>
+  </div>
+  </div>
+  </li>
+		</ul>
+	</div>
+
+	<script>
+		{
+			const sampleMenuP = document.querySelector('.sample_menu_parent');
+			const sampleMenuC = document.querySelector('.sample_menu_child');
+
+				sampleMenuP.addEventListener('click', () => {
+				sampleMenuC.classList.toggle('active');
+  				sampleMenuP.classList.toggle('active');
+			});
+
+		}
+	</script>
+
+  
 </div>

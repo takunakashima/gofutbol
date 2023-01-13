@@ -249,8 +249,8 @@
   margin-top: 10px;
 }
 .name{
-  color: gray;
-  font-size: 25px;
+  color: #333333;
+  font-size: 200% ;
   font-weight: bold;
-margin-bottom: 7vh;
+  margin-bottom: 5vh;
 }
