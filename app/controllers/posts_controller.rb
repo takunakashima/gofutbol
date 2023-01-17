@@ -48,6 +48,8 @@ class PostsController < ApplicationController
 
   def search
     @post = Post.search(params[:keyword])
+    @post.count
+
   end
 
   private

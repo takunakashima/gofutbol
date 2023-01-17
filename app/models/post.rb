@@ -10,9 +10,9 @@ class Post < ApplicationRecord
     # has_many :post_tags,through: :post_tags
     has_one_attached :image
 
-    validates :month_id, numericality: { other_than: 1 }
-    validates :day_id, numericality: { other_than: 1 }
-    validates :content, presence: true
+    validates :month_id, numericality: { other_than: 1 , message: "は---以外を入力してください"}
+    validates :day_id, numericality: { other_than: 1 , message: "は---以外を入力してください"}
+    validates :content, presence: true, length: { maximum: 1000 }
     validates :image, presence: true
 
     def self.search(search)

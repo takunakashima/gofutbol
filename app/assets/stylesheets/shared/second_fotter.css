@@ -22,7 +22,6 @@
 
 .second-fotter-logo {
   width: 185px;
-  height: 49px;
   margin:  auto;
   font-size: 3vw;
   font-family:Arial, Helvetica, sans-serif;
@@ -40,4 +39,20 @@
   font-weight: bold;
   display: flex;
   justify-content: center;
+}
+
+
+.footer-トロフィーicon{
+  resize: both;
+}
+
+.second_footer_app_logo {
+  width: 8vw;
+  /* margin-top: 10vw; */
+  font-size: 4vw;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-left: 30%;
+  margin-top: 10vh;
 }

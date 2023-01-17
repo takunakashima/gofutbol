@@ -18,14 +18,22 @@
 
 .app_logo {
   width: 8vw;
-  margin-right: 5vw;
+  margin-right: 9vw;
   margin-top: 1vw;
   font-size: 3.4vw;
   font-family:Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: white;
 }
-
+.second_app_logo {
+  width: 8vw;
+  margin-right: 9vw;
+  margin-top: 1vw;
+  font-size: 3.4vw;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #333333;
+}
 .search-form {
   width: 65vw;
   height: 5vh;

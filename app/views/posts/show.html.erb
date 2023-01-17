@@ -74,7 +74,7 @@
 
   <% if user_signed_in? %>
     <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
-      <%# <%= render 'shared/error_messages', model: f.object %>
+        <%# <%= render 'shared/error_messages', model: f.object %> 
       <%= f.text_area :text , class: "comment-text"%>
       <div class="comment-index">
       <%= f.submit "コメントをする", class: "comment-btn" %>

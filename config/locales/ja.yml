@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        first_name: 名前
+        last_name: 苗字
+      post:
+        content: テキスト
+        image: 画像
+        month_id: 月
+        day_id: 日
+        user: ユーザー

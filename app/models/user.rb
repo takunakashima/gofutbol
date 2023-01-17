@@ -8,7 +8,13 @@ class User < ApplicationRecord
     has_many :posts
     has_many :favorites, dependent: :destroy     # ユーザー/お気に入り → 1:多
     has_many :favorite_posts, through: :favorites, source: :post
-    validates :team_id, numericality: { other_than: 1 , message: "can't be blank"}
+
+    VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+    validates :password, format: { with: VALID_PASSWORD_REGEX}
+    validates :nickname, presence: true
+    validates :first_name, presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
+    validates :last_name, presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
+
 
 
 end
