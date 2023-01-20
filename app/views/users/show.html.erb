@@ -6,15 +6,30 @@
 </div>
 <div class="main">
   <p class="mypage-nickname"><%= @nickname %>さんの投稿一覧</p>
+
+  <% if @posts.length == 0 %>
+   <h4 class="search-h4"><%= @nickname %>さんの投稿はありません</h4>
+   <% else %>
     <% @posts.each do |post| %>
-      <%# <div class="content_post" style="background-image: url(<%= post.image);"> %>
         <%= link_to post_path(post.user.id) do %>
         <%= image_tag post.image.variant(resize: '600x400',gravity: "center", crop: "300x250+0+0"), class: "post-image" %>
         <p class="mypage-info"><%= " < 投稿日 >　#{post.created_at.strftime('%Y/%m/%d')}" %><%=" ：#{post.content}" %></p>
-      <%# </div> %>
       <% end %>
     <% end %>
-  </div>
+    <% end %>
+      <p class="mypage-nickname"><%= @nickname %>さんの投稿一覧</p>
+      <% if @favorite_list.length == 0 %>
+        <h4 class="search-h4"><%= @nickname %>さんのお気に入りはありません</h4>
+      <% else %>
+    <p class="mypage-nickname"><%= @nickname %>さんのお気に入り一覧</p>
+    <% @favorite_list.each do |favorite| %>
+        <%= link_to post_path(favorite.user.id) do %>
+        <%= image_tag favorite.image.variant(resize: '600x400',gravity: "center", crop: "300x250+0+0"), class: "post-image" %>
+        <p class="mypage-info"><%= " < 投稿日 >　#{favorite.created_at.strftime('%Y/%m/%d')}" %><%=" ：#{favorite.content}" %></p>
+      <% end %>
+    <% end %>
+    <% end %>
+</div>
 </div>
 
 <%= render "shared/footer" %>

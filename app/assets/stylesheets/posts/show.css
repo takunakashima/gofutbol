@@ -254,3 +254,8 @@
   font-weight: bold;
   margin-bottom: 5vh;
 }
+.favorite_status{
+  font-size: large;
+  color:#4e4d4d;
+  font-weight: bold;
+}

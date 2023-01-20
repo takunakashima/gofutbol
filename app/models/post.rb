@@ -23,10 +23,5 @@ class Post < ApplicationRecord
         Post.all
       end
     end
-
-    def liked_by?(user)
-      Favorites.where(user_id: user.id).exists?
-      # ↑小文字？
-    end
     
 end
