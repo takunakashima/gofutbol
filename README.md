@@ -1,6 +1,5 @@
 # アプリケーション名
 Go!Futbol!
-[![Image from Gyazo](https://i.gyazo.com/956a9ff6fa915592f6d45d998c738d2b.gif)](https://gyazo.com/956a9ff6fa915592f6d45d998c738d2b)
 
 <br>
 
@@ -103,16 +102,15 @@ https://github.com/takunakashima/gofutbol
 
 ### トップページ一覧
 
-[![Image from Gyazo](https://i.gyazo.com/6d167e0800abf7aad33fa54e88925e5a.gif)](https://gyazo.com/6d167e0800abf7aad33fa54e88925e5a)
+[![Image from Gyazo](https://i.gyazo.com/18fb1b64dbe3c5212850c24c679c5d43.gif)](https://gyazo.com/18fb1b64dbe3c5212850c24c679c5d43)
 
 ### 新規投稿
 
-[![Image from Gyazo](https://i.gyazo.com/9cdb54e8272bc76c10a4aa28e206ecfd.gif)](https://gyazo.com/9cdb54e8272bc76c10a4aa28e206ecfd)
+[![Image from Gyazo](https://i.gyazo.com/9d267fc1c5dd53c7b4b583ab09ee3de7.gif)](https://gyazo.com/9d267fc1c5dd53c7b4b583ab09ee3de7)
 
 ### 検索機能
 
-[![Image from Gyazo](https://i.gyazo.com/5a380924ff80e9060975469a8a4f81b7.gif)](https://gyazo.com/5a380924ff80e9060975469a8a4f81b7)
-
+[![Image from Gyazo](https://i.gyazo.com/194779ccfe98a62a0ea51855db3a1d48.gif)](https://gyazo.com/194779ccfe98a62a0ea51855db3a1d48)
 
 ### コメント機能
 
