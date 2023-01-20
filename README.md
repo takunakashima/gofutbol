@@ -102,7 +102,7 @@ https://github.com/takunakashima/gofutbol
 
 ### トップページ一覧
 
-[![Image from Gyazo](https://i.gyazo.com/18fb1b64dbe3c5212850c24c679c5d43.gif)](https://gyazo.com/18fb1b64dbe3c5212850c24c679c5d43)
+[![Image from Gyazo](https://i.gyazo.com/6d167e0800abf7aad33fa54e88925e5a.gif)](https://gyazo.com/6d167e0800abf7aad33fa54e88925e5a)
 
 ### 新規投稿
 
