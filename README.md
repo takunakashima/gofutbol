@@ -74,13 +74,17 @@ https://github.com/takunakashima/gofutbol
 
 3.新規投稿画面より、画像（jpeg,pngのみ）、月日、チーム（任意）、テキストを入力し投稿するをクリックする。
 
-投稿者は投稿した記事を編集・削除ができる。
+<br>
 
-投稿者以外は投稿に対してのコメント・お気に入りをつける事ができる。
+### その他
 
-お気に入りした記事・投稿した記事はログインしたアカウントでマイページをクリックし、一覧表示ができる。
+・投稿者は投稿した記事を編集・削除ができる。
 
-検索フォームにキーワードを入力すると、キーワードの文字列を含む検索結果が一覧表示される。
+・投稿者以外は投稿に対してのコメント・お気に入りをつける事ができる。
+
+・お気に入りした記事・投稿した記事はログインしたアカウントでマイページをクリックし、一覧表示ができる。
+
+・検索フォームにキーワードを入力すると、キーワードの文字列を含む検索結果が一覧表示される。
 
 
 
@@ -100,24 +104,24 @@ https://github.com/takunakashima/gofutbol
 
 # 実装した機能についてのGIF及び説明
 
-### トップページ一覧
+## トップページ一覧
 
 <!-- [![Image from Gyazo](https://i.gyazo.com/f242421a7e47dec8499a60eaf4a1761d.gif)](https://gyazo.com/f242421a7e47dec8499a60eaf4a1761d) -->
 [![Image from Gyazo](https://i.gyazo.com/0e05bcd46ffd9e625495aca246ebee10.jpg)](https://gyazo.com/0e05bcd46ffd9e625495aca246ebee10)
 
-### 新規投稿
+## 新規投稿
 
 [![Image from Gyazo](https://i.gyazo.com/9d267fc1c5dd53c7b4b583ab09ee3de7.gif)](https://gyazo.com/9d267fc1c5dd53c7b4b583ab09ee3de7)
 
-### 検索機能
+## 検索機能
 
 [![Image from Gyazo](https://i.gyazo.com/194779ccfe98a62a0ea51855db3a1d48.gif)](https://gyazo.com/194779ccfe98a62a0ea51855db3a1d48)
 
-### コメント機能
+## コメント機能
 
 [![Image from Gyazo](https://i.gyazo.com/ea5571ecc4f36f5be237239374d948dc.gif)](https://gyazo.com/ea5571ecc4f36f5be237239374d948dc)
 
-### お気に入り機能
+## お気に入り機能
 
 [![Image from Gyazo](https://i.gyazo.com/2e37c867e37fa22872064c17419444fc.gif)](https://gyazo.com/2e37c867e37fa22872064c17419444fc)
 
