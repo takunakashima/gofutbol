@@ -42,10 +42,22 @@
       </tbody>
     </table>
     <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-       
+        <%# <span>お気に入り 0</span> %>
+
+       <%# お気に入り機能実装 %>
+  <% if user_signed_in? && current_user !=@post.user %>
+     <div class="favorite-btn">
+
+    <% if current_user.favorite_find(@post.id) %>
+      <%= image_tag "星アイコン6.png" ,class:"favorite-star-icon" ,width:"20",height:"20" %>
+      <%= link_to 'お気に入りからはずす', destroy_favorite_path(@post.id), method: :delete, class: "favorite_status"%>
+    <% else %>
+      <%= image_tag "星アイコン8.png" ,class:"favorite-star-icon" ,width:"20",height:"20" %>
+      <%= link_to 'お気に入り登録する', create_favorite_path(@post.id), method: :post, class: "favorite_status" %>
+    <% end %>
+  <% end %>
+       <%# お気に入り機能実装 %>
+
       </div>
     </div>
   </div>
@@ -66,7 +78,7 @@
       <div class="comment">
         <p class="user-info"><%= comment.user.nickname %>： </p>
         <p><%= comment.text%></p>
-        <p><%= comment.created_at.to_s(:datetime_jp)%></p>
+        <%# <p><%= comment.created_at.to_s(:datetime_jp)</p>  %>
       </div>
     <% end %>
   </div>

@@ -22,7 +22,6 @@ if(location.pathname.match(/\/posts\/\d/)){
         <div class="comment">
           <p class="user-info">${data.user.nickname}： </p>
           <p>${data.comment.text}</p>
-          <p>${data.comment.created_at}</p>
         </div>`
       const comments = document.getElementById("comments")
       comments.insertAdjacentHTML('beforeend', html)
