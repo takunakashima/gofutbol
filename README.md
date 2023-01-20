@@ -16,22 +16,22 @@
 
 - has_many :posts
 - has_many :comments
-- has_many :user_favorites
-- has_many :favorites, through: :user_favorites
+- has_many :favorites
+<!-- - has_many :favorites, through: :user_favorites -->
 
 ## favoritesテーブル
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | --------------------------|
-| follow             | string | null: false , unique: true|
-| follower           | string | null: false               |
+| Column             | Type    | Options                   |
+| ------------------ | ------- | --------------------------|
+| user               |reference| null: false , unique: true|
+| post               |reference| null: false , unique: true|
 
 ### Association
 
-- has_many :user
-- has_many :user, through: :user_favorites
+- belongs_to :user
+- belongs_to :post
 
-## user_favoritesテーブル
+<!-- ## user_favoritesテーブル
 
 | Column             | Type    | Options                        |
 | ------------------ | ------- | -------------------------------|
@@ -41,7 +41,7 @@
 ### Associfonation
 
 - belongs_to :user
-- belongs_to :favorite
+- belongs_to :favorite -->
 
 ## postsテーブル
 
@@ -57,10 +57,9 @@
 
 - belongs_to :user
 - has_many :comments
-- has_many :post_tags
-- has_many :tags, through: :post_tags
+- has_many :favorites
 
-## tagsテーブル
+<!-- ## tagsテーブル
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ------------|
@@ -81,7 +80,7 @@
 ### Association
 
 - belongs_to :post
-- belongs_to :tag
+- belongs_to :tag -->
 
 ## commentsテーブル
 
