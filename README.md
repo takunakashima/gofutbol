@@ -6,7 +6,7 @@ Go!Futbol!
 # アプリケーション概要
 サッカー情報特化型SNS 
 
-コミュニティ機能を実装し、任意のグループで情報交換ができる（未実装）
+コミュニティ機能を実装し、任意のグループで情報交換ができる
 
 <br>
 
@@ -38,32 +38,32 @@ https://github.com/takunakashima/gofutbol
 <br>
 
 # テスト用アカウントuser1
-・ニックネーム   :球際の魔術師
+・ニックネーム　　　:球際の魔術師
 
-・メールアドレス :go@futbol
+・メールアドレス　　:go@futbol
 
-・パスワード    :futbol1
+・パスワード　　　　:futbol1
 
-・名前         :球際 剛
+・名前　　　　　　　:球際 剛
 
-・生年月日      :1930/1/1
+・生年月日　　　　　:1930/1/1
 
-・好きなチーム  :横浜Fマリノス
+・好きなチーム　　　:横浜Fマリノス
 
 <br>
 
 # テスト用アカウントuser2
-・ニックネーム   :右利きのマラドーナ
+・ニックネーム　　　:右利きのマラドーナ
 
-・メールアドレス :sample@sample
+・メールアドレス　　:sample@sample
 
-・パスワード    :sample1
+・パスワード　　　　:sample1
 
-・名前         :ディエゴ　マラドーナ
+・名前　　　　　　　:ディエゴ　マラドーナ
 
-・生年月日      :1930/1/1
+・生年月日　　　　　:1930/1/1
 
-・好きなチーム  :横浜Fマリノス
+・好きなチーム　　　:横浜Fマリノス
 
 <br>
 
@@ -136,14 +136,35 @@ https://github.com/takunakashima/gofutbol
 
 <br>
 
-・お気に入り機能を実装することで、好きな時に好きな記事を見れるようにしました。
+・お気に入り機能を実装することで、お気に入り登録した記事を一覧で見れるようにしました。
 
 また記事に対してのコメント機能を実装し、ユーザー間の簡易コミュニケーションが可能になりました。
 
 <br>
 
+# 実装予定の機能
+・コミュニティグループ作成機能
+
+・ダイレクトメッセージ機能
+
+・海外トライアウトのリンク掲載
 
 <br>
+
+# テストコード
+
+以下をRspecにてテストコードを記述し、正常系・異常系をモデル単体で実行しています。
+
+・devise ユーザー新規登録機能
+
+[![Image from Gyazo](https://i.gyazo.com/b225469f08aa1c213420c08a296b13b6.png)](https://gyazo.com/b225469f08aa1c213420c08a296b13b6)
+
+・新規投稿機能
+
+[![Image from Gyazo](https://i.gyazo.com/f6157c3c2b3c63398ba64c0697c4ad77.png)](https://gyazo.com/f6157c3c2b3c63398ba64c0697c4ad77)
+
+<br>
+
 
 # テーブル設計
 
@@ -159,12 +180,16 @@ https://github.com/takunakashima/gofutbol
 | birth_date         | date   | null: false               |
 | team_id            | integer| null: false               |
 
+<br>
+
 ### Association
 
 - has_many :posts
 - has_many :comments
 - has_many :favorites
 <!-- - has_many :favorites, through: :user_favorites -->
+
+<br>
 
 ## favoritesテーブル
 
@@ -173,10 +198,14 @@ https://github.com/takunakashima/gofutbol
 | user               |reference| null: false , unique: true|
 | post               |reference| null: false , unique: true|
 
+<br>
+
 ### Association
 
 - belongs_to :user
 - belongs_to :post
+
+<br>
 
 <!-- ## user_favoritesテーブル
 
@@ -199,6 +228,8 @@ https://github.com/takunakashima/gofutbol
 | team_id            | integer | null: false                     |
 | content            | text    | null: false                     |
 | user               |reference| null: false , foreign_key: true |
+
+<br>
 
 ### Association
 
@@ -229,6 +260,8 @@ https://github.com/takunakashima/gofutbol
 - belongs_to :post
 - belongs_to :tag -->
 
+<br>
+
 ## commentsテーブル
 
 | Column             | Type    | Options                        |
@@ -236,6 +269,8 @@ https://github.com/takunakashima/gofutbol
 | comment            | text    | null: false                    |
 | post               |reference| null: false ,foreign_key: true |
 | user               |reference| null: false ,foreign_key: true |
+
+<br>
 
 ### Association
 
