@@ -1,15 +1,21 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user!   # ログイン中のユーザーのみに許可（未ログインなら、ログイン画面へ移動）
+  before_action :authenticate_user!
+  before_action :set_like
 
-    def create
-      favorite = current_user.favorites.build(post_id: params[:post_id])
-      favorite.save
-      redirect_back(fallback_location: root_path)
-    end
-  
-    def destroy
-      favorite = Favorite.find_by(post_id: params[:post_id], user_id: current_user.id)
-      favorite.destroy
-      redirect_back(fallback_location: root_path)
-    end
+  def create
+      user = current_user
+      post = Post.find(params[:post_id])
+      favorite = Favorite.create(user_id: user.id, post_id: post.id)
   end
+  def destroy
+      user = current_user
+      post = Post.find(params[:post_id])
+      favorite = Favorite.find_by(user_id: user.id, post_id: post.id)
+      favorite.delete
+  end
+
+  private
+  def set_like
+      @post = Post.find(params[:post_id])
+  end
+end

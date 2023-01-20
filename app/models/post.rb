@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :user
+    # has_many :users, through: :favorites
     belongs_to :team
     belongs_to :month
     belongs_to :day
@@ -23,7 +24,9 @@ class Post < ApplicationRecord
       end
     end
 
-    def already_favorited?(user) #引数を受け取るように設定
-      favorites.where(user_id: user.id).exists?
+    def liked_by?(user)
+      Favorites.where(user_id: user.id).exists?
+      # ↑小文字？
     end
+    
 end
