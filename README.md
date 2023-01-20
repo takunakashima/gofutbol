@@ -247,8 +247,7 @@ https://github.com/takunakashima/gofutbol
 
 # データベース設計
 
-[![Image from Gyazo](https://i.gyazo.com/3577b397ee5270f3da624b31209e45d2.png)](https://gyazo.com/3577b397ee5270f3da624b31209e45d2)
-
+[![Image from Gyazo](https://i.gyazo.com/ba0cde682fb9f288a7cf6853a4e529f3.png)](https://gyazo.com/ba0cde682fb9f288a7cf6853a4e529f3)
 <br>
 
 # 画面遷移図
