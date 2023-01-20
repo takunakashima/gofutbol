@@ -1,6 +1,7 @@
 # アプリケーション名
 Go!Futbol!
-[![Image from Gyazo](https://i.gyazo.com/6d167e0800abf7aad33fa54e88925e5a.gif)](https://gyazo.com/6d167e0800abf7aad33fa54e88925e5a)
+[![Image from Gyazo](https://i.gyazo.com/956a9ff6fa915592f6d45d998c738d2b.gif)](https://gyazo.com/956a9ff6fa915592f6d45d998c738d2b)
+
 <br>
 
 # アプリケーション概要
