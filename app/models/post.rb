@@ -5,8 +5,8 @@ class Post < ApplicationRecord
     belongs_to :team
     belongs_to :month
     belongs_to :day
-    has_many :comments
-    has_many :favorites
+    has_many :comments, dependent: :destroy
+    has_many :favorites, dependent: :destroy
     # has_many :post_tags
     # has_many :post_tags,through: :post_tags
     has_one_attached :image
