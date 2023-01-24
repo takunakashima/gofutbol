@@ -5,11 +5,18 @@
     <%= render "posts/side_bar" %>
 </div>
 <div class="main">
+<%# 個人詳細 %>
 <div class="mypage_info">
-<%# 個人詳細 %>
-
-<%# 個人詳細 %>
+  <div class="maypage_box">
+    <div class="mypage_culumn">ニックネーム</div>
+    <div class="mypage_value"><%= @user.nickname%></div>
+  </div>
+  <div class="maypage_box">
+    <div class="mypage_culumn">好きなチーム</div>
+    <div class="mypage_value"><%= @user.team.name%></div>
+  </div>
 </div>
+<%# 個人詳細 %>
   <p class="mypage-nickname"><%= @nickname %>さんの投稿一覧</p>
 
   <% if @posts.length == 0 %>

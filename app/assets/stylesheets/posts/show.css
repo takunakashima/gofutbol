@@ -225,8 +225,6 @@
   margin-top: 20px;
 }
 
-
-
 .comment p{
    margin: 0;
 }
@@ -258,4 +256,7 @@
   font-size: large;
   color:#4e4d4d;
   font-weight: bold;
+}
+.mypage_box{
+  display: ;
 }

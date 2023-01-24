@@ -104,7 +104,7 @@ https://github.com/takunakashima/gofutbol
 
 # 実装した機能についてのGIF及び説明
 
-## トップページ一覧
+## トップページ
 
 <!-- [![Image from Gyazo](https://i.gyazo.com/f242421a7e47dec8499a60eaf4a1761d.gif)](https://gyazo.com/f242421a7e47dec8499a60eaf4a1761d) -->
 [![Image from Gyazo](https://i.gyazo.com/0e05bcd46ffd9e625495aca246ebee10.jpg)](https://gyazo.com/0e05bcd46ffd9e625495aca246ebee10)
