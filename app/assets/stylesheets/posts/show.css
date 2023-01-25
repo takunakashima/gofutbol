@@ -262,8 +262,7 @@
   display: inline-block;
   text-align: left;
   margin-bottom: 3vh;
-  /* border: 2px solid #4e4d4d; */
-  border: 10px groove forestgreen;
+  border: 10px groove grey;
   border-radius: 5px;
 }
 .mypage_culumn{
@@ -275,9 +274,9 @@
 }
 .mypage_value{
   text-align: center;
-  font-size: x-large;
+  font-size: large;
 }
 .mypage_info{
   text-align: center;
-  margin-top:3vh;
+  margin-top:5vh;
 }
