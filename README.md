@@ -38,32 +38,32 @@ https://github.com/takunakashima/gofutbol
 <br>
 
 # テスト用アカウントuser1
-・ニックネーム　　　:球際の魔術師
+・ニックネーム　　　:　球際の魔術師
 
-・メールアドレス　　:go@futbol
+・メールアドレス　　:　go@futbol
 
-・パスワード　　　　:futbol1
+・パスワード　　　　:　futbol1
 
-・名前　　　　　　　:球際 剛
+・名前　　　　　　　:　球際 剛
 
-・生年月日　　　　　:1930/1/1
+・生年月日　　　　　:　1930/1/1
 
-・好きなチーム　　　:横浜Fマリノス
+・好きなチーム　　　:　横浜Fマリノス
 
 <br>
 
 # テスト用アカウントuser2
-・ニックネーム　　　:右利きのマラドーナ
+・ニックネーム　　　:　右利きのマラドーナ
 
-・メールアドレス　　:sample@sample
+・メールアドレス　　:　sample@sample
 
-・パスワード　　　　:sample1
+・パスワード　　　　:　sample1
 
-・名前　　　　　　　:ディエゴ　マラドーナ
+・名前　　　　　　　:　ディエゴ　マラドーナ
 
-・生年月日　　　　　:1930/1/1
+・生年月日　　　　　:　1930/1/1
 
-・好きなチーム　　　:横浜Fマリノス
+・好きなチーム　　　:　横浜Fマリノス
 
 <br>
 
@@ -104,7 +104,7 @@ https://github.com/takunakashima/gofutbol
 
 # 実装した機能についてのGIF及び説明
 
-## トップページ一覧
+## トップページ
 
 <!-- [![Image from Gyazo](https://i.gyazo.com/f242421a7e47dec8499a60eaf4a1761d.gif)](https://gyazo.com/f242421a7e47dec8499a60eaf4a1761d) -->
 [![Image from Gyazo](https://i.gyazo.com/0e05bcd46ffd9e625495aca246ebee10.jpg)](https://gyazo.com/0e05bcd46ffd9e625495aca246ebee10)

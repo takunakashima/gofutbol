@@ -5,18 +5,25 @@
     <%= render "posts/side_bar" %>
 </div>
 <div class="main">
+<%# 個人詳細 %>
 <div class="mypage_info">
-<%# 個人詳細 %>
-
-<%# 個人詳細 %>
+  <div class="mypage_box">
+    <div class="mypage_culumn">ニックネーム</div>
+    <div class="mypage_value"><%= @user.nickname%></div>
+  </div>
+  <div class="mypage_box">
+    <div class="mypage_culumn">好きなチーム</div>
+    <div class="mypage_value"><%= @user.team.name%></div>
+  </div>
 </div>
+<%# 個人詳細 %>
   <p class="mypage-nickname"><%= @nickname %>さんの投稿一覧</p>
 
   <% if @posts.length == 0 %>
    <h4 class="search-h4"><%= @nickname %>さんの投稿はありません</h4>
    <% else %>
     <% @posts.each do |post| %>
-        <%= link_to post_path(post.user.id) do %>
+        <%= link_to user_path(post.user.id) do %>
         <%= image_tag post.image.variant(resize: '600x400',gravity: "center", crop: "300x250+0+0"), class: "post-image" %>
         <p class="mypage-info"><%= " < 投稿日 >　#{post.created_at.strftime('%Y/%m/%d')}" %><%=" ：#{post.content}" %></p>
       <% end %>
